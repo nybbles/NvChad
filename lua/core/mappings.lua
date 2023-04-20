@@ -135,6 +135,21 @@ M.lspconfig = {
       "lsp definition",
     },
 
+    ["gs"] = {
+      function()
+        require('telescope.builtin').lsp_document_symbols()
+      end,
+      "search document symbol",
+    },
+
+    ["gS"] = {
+      function()
+        require('telescope.builtin').lsp_dynamic_workspace_symbols()
+      end,
+      "search workspace symbol",
+    },
+
+
     ["K"] = {
       function()
         vim.lsp.buf.hover()

@@ -60,4 +60,20 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
+
+require("lspconfig").pyright.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  settings = {
+    python = {
+      analysis = {
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        diagnosticMode = 'workspace',
+      },
+    },
+  },
+}
+
+
 return M
